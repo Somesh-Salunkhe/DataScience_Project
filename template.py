@@ -1,3 +1,8 @@
+'''
+Template file for automating creation of folder structure for the project
+'''
+
+
 # Imports
 import os
 from pathlib import Path
