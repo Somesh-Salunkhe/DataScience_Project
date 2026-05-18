@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction Result</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .result-container {
+            width: 500px;
+            margin: 100px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .prediction {
+            font-size: 60px;
+            font-weight: bold;
+            color: #27ae60;
+            margin: 20px 0;
+        }
+
+        .quality-text {
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #27ae60;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #219150;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="result-container">
+
+        <h1>Wine Quality Prediction</h1>
+
+        <!-- Prediction Result -->
+        <div class="prediction">
+            {{ prediction }}
+        </div>
+
+        <!-- Optional Quality Message -->
+        <div class="quality-text">
+
+            {% if prediction <= 2 %}
+                Poor Quality Wine 🍷
+            {% elif prediction <= 4 %}
+                Average Quality Wine 🍷
+            {% elif prediction <= 6 %}
+                Good Quality Wine 🍷
+            {% else %}
+                Excellent Quality Wine 🍷
+            {% endif %}
+
+        </div>
+
+        <!-- Back Button -->
+        <a href="/" class="btn">Predict Again</a>
+
+    </div>
+
+</body>
+</html>
