@@ -102,8 +102,15 @@ docker build -t wine-quality-predictor .
 
 ### Run the Container
 ```bash
-docker run -p 8080:8080 wine-quality-predictor
+docker run -p 8080:8080 \
+  -e MLFLOW_TRACKING_URI="your-uri" \
+  -e MLFLOW_TRACKING_USERNAME="your-username" \
+  -e MLFLOW_TRACKING_PASSWORD="your-password" \
+  wine-quality-predictor
 ```
+
+Open:
+`http://localhost:8080`
 
 ---
 
@@ -156,10 +163,3 @@ The Flask app provides two main routes:
 ## 📄 License
 
 This project is licensed under the [GPL-3.0 License](LICENSE).
-
----
-
-## 👤 Author
-
-**Somesh Salunkhe**  
-[![GitHub](https://img.shields.io/badge/GitHub-Somesh--Salunkhe-black?logo=github)](https://github.com/Somesh-Salunkhe)
