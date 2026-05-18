@@ -1,6 +1,6 @@
 # 🍷 Wine Quality Predictor — End-to-End MLOps Pipeline
 
-An end-to-end machine learning project that predicts **red wine quality** using an **ElasticNet regression model**, with a full MLOps pipeline including data ingestion, validation, transformation, model training, evaluation with **MLflow** tracking, and a **Flask** web application for real-time predictions — containerized with **Docker**.
+An end-to-end data science project that predicts **red wine quality** using an **ElasticNet regression model**, with a full MLOps pipeline including data ingestion, validation, transformation, model training, evaluation with **MLflow** tracking, and a **Flask** web application for real-time predictions — containerized with **Docker**.
 
 ---
 
